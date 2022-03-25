@@ -765,3 +765,21 @@ background: linear-gradient(180deg, rgba(242,135,5,1) 0%, rgba(0,0,0,1) 98%);
    animation-direction: normal;
    animation-fill-mode: both;
  }
+
+ @keyframes contacto {
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
+
+.aniContact {
+  animation: contacto 1s ease 0s 1 normal forwards;
+}
