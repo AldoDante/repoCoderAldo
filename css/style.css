@@ -29,7 +29,9 @@ section article p {
 /* botonera start*/
 
 .encabezado {
-  background-color: #f28705;
+  /*background-color: #f28705; */
+  background: rgb(242,135,5); /* Gradiente Botonera */
+  background: linear-gradient(0deg, rgba(242,135,5,1) 0%, rgba(0,0,0,1) 65%);
   top: 0;
   padding: 10px 30px;
   display: flex;
@@ -54,11 +56,15 @@ section article p {
   text-decoration: none;
   color: #260101;
 }
-.encabezado ul li a:hover {
+*.encabezado ul li a:hover {
   font-weight: 700;
   color: #732c02;
 }
 
+.footer {
+  background: rgb(242,135,5);
+background: linear-gradient(180deg, rgba(242,135,5,1) 0%, rgba(0,0,0,1) 98%);
+}
 /*botonera end*/
 
 /* clases camelCase  */
@@ -292,6 +298,8 @@ section article p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background: rgb(242,135,5);
+    background: linear-gradient(90deg, rgba(242,135,5,1) 0%, rgba(115,44,0,1) 32%);
   }
   header nav ul {
     flex-direction: column;
@@ -685,3 +693,75 @@ section article p {
     flex-direction: row;
   }
 }
+
+/*            Animaciones             */
+
+.rotar:hover {
+  transform: rotateY(360deg);
+  transition: transform 5s;
+}
+
+@keyframes redes {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+.animation:hover {
+  animation-name: redes;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+.burger:hover { 
+  transform: rotateZ(3deg);
+  transition: transform 2s;
+  cursor: pointer;
+}
+
+@keyframes nosotros {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.aninos { nosotros 1s ease 3s infinite normal both;
+   animation-name: nosotros;
+   animation-duration: 1s;
+   animation-timing-function: ease;
+   animation animation-delay: 3s;
+   animation-iteration-count: 1;
+   animation-direction: normal;
+   animation-fill-mode: both;
+ }
